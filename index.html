@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Camera App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="camera-container">
+        <div class="camera-header">
+            <button id="switchCamera" class="btn">Switch Camera</button>
+            <button id="takePhoto" class="btn">Take Photo</button>
+            <button id="recordVideo" class="btn">Record Video</button>
+            <div id="recordingTimer" class="recording-timer">00:00</div>
+        </div>
+        
+        <div class="video-container">
+            <video id="video" autoplay playsinline></video>
+            <canvas id="canvas"></canvas>
+        </div>
+        
+        <div class="controls">
+            <div class="audio-control">
+                <label for="audioToggle">Record Audio:</label>
+                <input type="checkbox" id="audioToggle" checked>
+            </div>
+            <div class="filters-container">
+                <div class="filter-scroll">
+                    <div class="filter-option active" data-filter="none">
+                        <div class="filter-preview none"></div>
+                        <span>Normal</span>
+                    </div>
+                    <div class="filter-option" data-filter="grayscale">
+                        <div class="filter-preview grayscale"></div>
+                        <span>Grayscale</span>
+                    </div>
+                    <div class="filter-option" data-filter="sepia">
+                        <div class="filter-preview sepia"></div>
+                        <span>Sepia</span>
+                    </div>
+                    <div class="filter-option" data-filter="invert">
+                        <div class="filter-preview invert"></div>
+                        <span>Invert</span>
+                    </div>
+                    <div class="filter-option" data-filter="hue-rotate">
+                        <div class="filter-preview hue-rotate"></div>
+                        <span>Hue Rotate</span>
+                    </div>
+                    <div class="filter-option" data-filter="contrast">
+                        <div class="filter-preview contrast"></div>
+                        <span>High Contrast</span>
+                    </div>
+                    <div class="filter-option" data-filter="saturate">
+                        <div class="filter-preview saturate"></div>
+                        <span>Saturated</span>
+                    </div>
+                    <div class="filter-option" data-filter="blur">
+                        <div class="filter-preview blur"></div>
+                        <span>Blur</span>
+                    </div>
+                    <div class="filter-option" data-filter="warm">
+                        <div class="filter-preview warm"></div>
+                        <span>Warm</span>
+                    </div>
+                    <div class="filter-option" data-filter="cool">
+                        <div class="filter-preview cool"></div>
+                        <span>Cool</span>
+                    </div>
+                    <div class="filter-option" data-filter="vintage">
+                        <div class="filter-preview vintage"></div>
+                        <span>Vintage</span>
+                    </div>
+                    <div class="filter-option" data-filter="blackwhite">
+                        <div class="filter-preview blackwhite"></div>
+                        <span>B&W</span>
+                    </div>
+                    <div class="filter-option" data-filter="technicolor">
+                        <div class="filter-preview technicolor"></div>
+                        <span>Technicolor</span>
+                    </div>
+                    <div class="filter-option" data-filter="polaroid">
+                        <div class="filter-preview polaroid"></div>
+                        <span>Polaroid</span>
+                    </div>
+                    <div class="filter-option" data-filter="kodachrome">
+                        <div class="filter-preview kodachrome"></div>
+                        <span>Kodachrome</span>
+                    </div>
+                    <div class="filter-option" data-filter="brownie">
+                        <div class="filter-preview brownie"></div>
+                        <span>Brownie</span>
+                    </div>
+                    <div class="filter-option" data-filter="lofi">
+                        <div class="filter-preview lofi"></div>
+                        <span>Lo-Fi</span>
+                    </div>
+                    <div class="filter-option" data-filter="sunset">
+                        <div class="filter-preview sunset"></div>
+                        <span>Sunset</span>
+                    </div>
+                    <div class="filter-option" data-filter="night">
+                        <div class="filter-preview night"></div>
+                        <span>Night</span>
+                    </div>
+                    <div class="filter-option" data-filter="rainbow">
+                        <div class="filter-preview rainbow"></div>
+                        <span>Rainbow</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="gallery-preview">
+            <img id="lastPhoto" src="" alt="Last photo">
+            <video id="lastVideo" controls style="display:none;"></video>
+            <button id="clearMedia" class="btn">Clear</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
